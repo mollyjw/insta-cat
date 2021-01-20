@@ -1,1 +1,28 @@
-<p>navbar works!</p>
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu ">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>thumbs_up_down</mat-icon>
+      <span>Your Faves</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>info</mat-icon>
+      <span>About Us</span>
+    </button>
+  </mat-menu>
+
+  <span class="spacer"></span>
+  <a [routerLink]="['/home']" routerLink="active"></a>
+  <span class="title">Insta-Cat</span>
+  <mat-icon aria-hidden="false" aria-label="Example cat icon">book_online</mat-icon>
+  <span class="spacer"></span>
+  <span class="smaller">Welcome</span>
+  <span class="spacer2"></span>
+
+  <span class="spacer2"></span>
+
+</mat-toolbar>
+<router-outlet></router-outlet>

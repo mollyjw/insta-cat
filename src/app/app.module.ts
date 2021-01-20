@@ -7,6 +7,10 @@ import { CatCardComponent } from './cat-card/cat-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,7 +30,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Cat } from '../cat.model';
 import { CatService } from '../services/cat.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cat-card',
@@ -9,31 +8,17 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./cat-card.component.css']
 })
 export class CatCardComponent implements OnInit {
-  cats: Cat[] = []
-  private sub = new Subscription()
+  @Input() cat: Cat
+  catImg: string
 
   constructor(private catService: CatService) { }
 
-  ngOnInit(): void {
-    this.retrieveAllCats()
-  }
+  ngOnInit(): void {}
 
-  retrieveAllCats() {
-    this.sub.add(
-      this.catService.getAllCats().subscribe(data => {
-        if (data) {
-          if (data.length) {
-            this.cats = data.map(x => new Cat(x))
-          } else {
-            this.cats = []
-          }
-        }
-      }, error => {
-        if (error) {
-          console.log(error)
-        }
-      })
-    )
+  ngOnChanges() {
+    if (this.cat) {
+      this.catImg = this.cat.url
+    }
   }
 
 }
