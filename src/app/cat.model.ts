@@ -6,12 +6,13 @@ export class Cat {
   height: number
 
   constructor({
-    breeds = [],
+    breeds = null,
     id = '',
     url = '',
     width = null,
     height = null
   }) {
+    Object.assign(this)
     this.breeds = breeds
     this.id = id
     this.url = url

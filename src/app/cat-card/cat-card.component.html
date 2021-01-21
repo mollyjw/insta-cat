@@ -1,6 +1,6 @@
 <div>
   <mat-card *ngIf="cat">
-    <mat-card-content>
+    <mat-card-content (click)="goToCatView(cat.id)">
        <img mat-card-image [src]="catImg" alt="Photo of a cat">
     </mat-card-content>
     <mat-card-actions>

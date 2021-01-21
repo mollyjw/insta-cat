@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SingleCatComponent } from './single-cat/single-cat.component';
 
 
 
@@ -22,7 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     CatCardComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SingleCatComponent
   ],
   imports: [
     BrowserModule,

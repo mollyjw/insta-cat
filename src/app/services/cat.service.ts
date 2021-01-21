@@ -20,7 +20,7 @@ export class CatService {
        'pagination-limit': '100',
        'pagination-page': '0'
      })
-     return this.http.get<Cat[]>(`${this.catApi}/images/search?limit=100`, {headers})
+     return this.http.get<Cat[]>(`${this.catApi}/images/search?limit=2`, {headers})
       .pipe(
         map((data: Cat[]) => {
           return data;
@@ -28,5 +28,12 @@ export class CatService {
           return throwError( 'Something went wrong');
         })
       )
+   }
+
+   getCatbyId(params) {
+     const headers = new HttpHeaders({
+       'authorization': environment.apiKey
+     })
+     return this.http.get<any>(`${this.catApi}/images/${params.id}`)
    }
 }

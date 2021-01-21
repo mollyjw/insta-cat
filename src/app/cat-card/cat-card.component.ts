@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cat } from '../cat.model';
-import { CatService } from '../services/cat.service';
 
 @Component({
   selector: 'app-cat-card',
@@ -11,7 +11,7 @@ export class CatCardComponent implements OnInit {
   @Input() cat: Cat
   catImg: string
 
-  constructor(private catService: CatService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {}
 
@@ -19,6 +19,10 @@ export class CatCardComponent implements OnInit {
     if (this.cat) {
       this.catImg = this.cat.url
     }
+  }
+
+  goToCatView(id: string) {
+    this.router.navigate([`/cats/${id}`])
   }
 
 }
