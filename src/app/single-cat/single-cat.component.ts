@@ -32,7 +32,7 @@ export class SingleCatComponent implements OnInit {
       this.catService.getCatbyId(params).subscribe(data => {
         if (data) {
           console.log(data)
-          this.cat = new Cat(data.cat) //weird line that controls single cat somehow?
+          this.cat = new Cat(data.cat) //weird line that has much power
           this.catImg = this.cat.url
         } error => {
           if (error) {
