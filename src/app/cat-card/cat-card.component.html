@@ -1,18 +1,17 @@
 <div>
   <mat-card *ngIf="cat">
-    <mat-card-content (click)="goToCatView(cat.id)">
+    <mat-card-content>
        <img mat-card-image [src]="catImg" alt="Photo of a cat">
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Like</button>
-      <button mat-button>Nope</button>
+      <button class="comments" mat-fab aria-label="Go to Comments">
+        <a (click)="goToCatView(cat.id)"><mat-icon>comment</mat-icon></a>
+      </button>
+      <button class="favorite" mat-fab aria-label="Favorite">
+        <mat-icon>favorite</mat-icon>
+      </button>
     </mat-card-actions>
-    <mat-form-field>
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex: you've CAT to be KITTEN me!"></textarea>
-    </mat-form-field>
+
   </mat-card>
 
 </div>
-
-<router-outlet></router-outlet>

@@ -20,7 +20,7 @@ export class CatService {
        'pagination-limit': '100',
        'pagination-page': '0'
      })
-     return this.http.get<Cat[]>(`${this.catApi}/images/search?limit=2`, {headers})
+     return this.http.get<Cat[]>(`${this.catApi}/images/search?limit=100`, {headers})
       .pipe(
         map((data: Cat[]) => {
           return data;

@@ -1,3 +1,24 @@
-<div *ngIf="cat">
-<p>single-cat works!</p>
+<div class="big-container">
+
+    <mat-card class="left" *ngIf="cat">
+      <mat-card-content>
+        <img mat-card-image [src]="catImg" alt="Photo of a cat">
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Like</button>
+        <button mat-button>Nope</button>
+      </mat-card-actions>
+    </mat-card>
+
+
+
+    <mat-card class="right">
+      <mat-card-title>Cat Comments</mat-card-title>
+      <mat-form-field>
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex: you've CAT to be KITTEN me!"></textarea>
+      </mat-form-field>
+      <button mat-button>Submit</button>
+    </mat-card>
+
 </div>

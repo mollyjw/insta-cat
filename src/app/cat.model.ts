@@ -6,7 +6,7 @@ export class Cat {
   height: number
 
   constructor({
-    breeds = null,
+    breeds = [],
     id = '',
     url = '',
     width = null,

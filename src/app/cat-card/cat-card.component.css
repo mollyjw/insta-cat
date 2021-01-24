@@ -1,0 +1,22 @@
+.mat-card-image {
+  width: 24vw;
+  max-height: 45vh;
+}
+
+.comments {
+  width: 48%;
+  background-color: darkorchid;
+  padding: 1%;
+  margin: 1%;
+  cursor: pointer;
+  border: transparent;
+}
+
+.favorite {
+  width: 48%;
+  background-color: darkorchid;
+  padding: 1%;
+  margin: 1%;
+  cursor: pointer;
+  border: transparent;
+}

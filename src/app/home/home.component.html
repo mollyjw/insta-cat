@@ -1,5 +1,11 @@
-<app-navbar></app-navbar>
-<div *ngFor="let cat of cats">
-  <app-cat-card [cat]="cat"></app-cat-card>
+
+<div >
+  <mat-grid-list cols="4" rowHeight="3:3">
+    <mat-grid-tile
+      *ngFor="let cat of cats">
+        <app-cat-card [cat]="cat"></app-cat-card>
+      </mat-grid-tile>
+  </mat-grid-list>
+
 </div>
 <p>You've reached the end. Would you like to refresh and see more cats?</p>
