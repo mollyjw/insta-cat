@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-evenly;
   padding: 4%;
-  height: calc(95vh - 100px);
   background-color: whitesmoke;
 }
 

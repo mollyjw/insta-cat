@@ -1,14 +1,14 @@
 <div>
   <mat-card *ngIf="cat">
-    <mat-card-content>
-       <img mat-card-image [src]="catImg" alt="Photo of a cat">
-    </mat-card-content>
+    <img mat-card-image [src]="catImg" alt="Photo of a cat">
     <mat-card-actions>
-      <button class="comments" mat-fab aria-label="Go to Comments">
-        <a (click)="goToCatView(cat.id)"><mat-icon>comment</mat-icon></a>
-      </button>
-      <button class="favorite" mat-fab aria-label="Favorite">
-        <mat-icon>favorite</mat-icon>
+      <a (click)="goToCatView(cat.id)">
+        <button class="comments" mat-raised-button aria-label="Go to Comments">
+          <mat-icon>comment</mat-icon> Comments
+        </button>
+      </a>
+      <button class="favorite" mat-raised-button aria-label="Favorite">
+        <mat-icon>favorite</mat-icon>Add to Favorites
       </button>
     </mat-card-actions>
 

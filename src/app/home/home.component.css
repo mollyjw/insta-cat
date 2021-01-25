@@ -1,0 +1,18 @@
+.masonry-layout {
+  column-count: 4;
+  column-gap: 0;
+  margin: 3%;
+}
+
+.masonry-layout__panel {
+  break-inside: avoid;
+}
+
+.masonry-layout__panel-content {
+  padding: 8px;
+  /* display: flex; Removing this line makes each card centered in the column */
+}
+
+.mat-card {
+  background-color: #cd65ff;
+}

@@ -10,6 +10,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
@@ -38,7 +40,9 @@ import { SingleCatComponent } from './single-cat/single-cat.component';
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

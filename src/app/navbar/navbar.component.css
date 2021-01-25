@@ -1,3 +1,9 @@
 .mat-toolbar {
   background-color: darkorchid;
+  font-family: 'Grandstander', cursive;
+  font-size: x-large;
+}
+
+.mat-menu {
+  font-family: 'Grandstander', cursive;
 }

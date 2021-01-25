@@ -1,22 +1,27 @@
-.mat-card-image {
-  width: 24vw;
-  max-height: 45vh;
+.mat-card {
+  background-color: #66009a;
+  margin-bottom: 0%;
+}
+
+.mat-card-actions {
+  text-align: center;
+  margin-top: -20px;
 }
 
 .comments {
-  width: 48%;
-  background-color: darkorchid;
+  width: 47%;
+  background-color: #69e2ff;
   padding: 1%;
-  margin: 1%;
+  margin: 2%;
   cursor: pointer;
   border: transparent;
 }
 
 .favorite {
-  width: 48%;
-  background-color: darkorchid;
+  width: 47%;
+  background-color: #69e2ff;
   padding: 1%;
-  margin: 1%;
+  margin: 2%;
   cursor: pointer;
   border: transparent;
 }
