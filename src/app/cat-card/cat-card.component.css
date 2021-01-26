@@ -6,22 +6,29 @@
 .mat-card-actions {
   text-align: center;
   margin-top: -20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
-.comments {
-  width: 47%;
+.mat-raised-button {
+  width: 42%;
   background-color: #69e2ff;
-  padding: 1%;
-  margin: 2%;
+  padding: 1.5%;
   cursor: pointer;
   border: transparent;
+  font-size: 1em;
 }
 
-.favorite {
-  width: 47%;
-  background-color: #69e2ff;
-  padding: 1%;
-  margin: 2%;
-  cursor: pointer;
-  border: transparent;
+#comments {
+  margin: 0px 8px;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.tooltip-teal {
+  background: #00b0ff;
+  font-size: 1em;
 }

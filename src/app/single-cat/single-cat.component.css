@@ -17,9 +17,11 @@
   height: 95%;
   /* height: calc(100% - 100px); */
   margin-left: 2%;
+  font-family: 'Grandstander', cursive;
 }
 
 .mat-form-field {
   padding: 1%;
   width: 95%;
+  background: white;
 }

@@ -1,15 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 import { Router } from '@angular/router';
 import { Cat } from '../cat.model';
 
 @Component({
   selector: 'app-cat-card',
   templateUrl: './cat-card.component.html',
-  styleUrls: ['./cat-card.component.css']
+  styleUrls: ['./cat-card.component.css'],
+
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class CatCardComponent implements OnInit {
   @Input() cat: Cat
   catImg: string
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[2]);
 
   constructor(private router: Router) { }
 

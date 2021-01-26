@@ -2,14 +2,29 @@
   <mat-card *ngIf="cat">
     <img mat-card-image [src]="catImg" alt="Photo of a cat">
     <mat-card-actions>
-      <a (click)="goToCatView(cat.id)">
-        <button class="comments" mat-raised-button aria-label="Go to Comments">
-          <mat-icon>comment</mat-icon> Comments
+      <div class="buttons">
+        <a (click)="goToCatView(cat.id)">
+          <button id="comments"
+                  mat-raised-button
+                  matTooltip="View the Comments"
+                  matTooltipPosition="above"
+                  matTooltipClass="tooltip-teal"
+                  aria-label="Go to Comments">
+            <mat-icon>comment</mat-icon>
+          </button>
+        </a>
+
+        <button class="favorite"
+                mat-raised-button
+                matTooltip="Add to Your Favorites"
+                matTooltipPosition="above"
+                matTooltipClass="tooltip-teal"
+                aria-label="Favorite">
+          <mat-icon>favorite</mat-icon>
         </button>
-      </a>
-      <button class="favorite" mat-raised-button aria-label="Favorite">
-        <mat-icon>favorite</mat-icon>Add to Favorites
-      </button>
+
+      </div>
+
     </mat-card-actions>
 
   </mat-card>

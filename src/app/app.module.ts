@@ -13,6 +13,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -42,6 +44,7 @@ import { SingleCatComponent } from './single-cat/single-cat.component';
     MatIconModule,
     MatGridListModule,
     MatButtonModule,
+    MatTooltipModule,
     FlexLayoutModule
   ],
   providers: [],
