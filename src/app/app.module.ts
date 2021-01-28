@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SingleCatComponent } from './single-cat/single-cat.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 
@@ -30,7 +31,8 @@ import { SingleCatComponent } from './single-cat/single-cat.component';
     CatCardComponent,
     HomeComponent,
     NavbarComponent,
-    SingleCatComponent
+    SingleCatComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
