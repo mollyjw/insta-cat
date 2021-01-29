@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Cat } from '../cat.model';
+import { Cat } from '../models-and-mocks/cat.model';
 import { CatService } from '../services/cat.service';
 
 @Component({

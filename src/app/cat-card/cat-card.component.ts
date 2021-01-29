@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { Router } from '@angular/router';
-import { Cat } from '../cat.model';
+import { Cat } from '../models-and-mocks/cat.model';
 
 @Component({
   selector: 'app-cat-card',

@@ -1,0 +1,48 @@
+<mat-card class="right">
+  <mat-card-subtitle>
+    Leave a Comment
+  </mat-card-subtitle>
+
+  <form (ngSubmit)="onSubmit()" #commentForm="ngForm">
+
+    <mat-card-content class="form-group">
+      <mat-label for="name">Name</mat-label>
+      <input type="text"
+      class="form-control" id="name"
+            required
+            [(ngModel)] ="model.name"
+            name="name"
+            #name="ngModel">
+      <mat-card-content>
+        <p [hidden]="name.valid || name.pristine"
+          class="alert alert-danger">
+          Name is required</p>
+      </mat-card-content>
+    </mat-card-content>
+
+    <mat-card-content class="form-group">
+      <mat-label for="commentText">Message</mat-label>
+      <input type="text"
+              class="form-control" id="commentText"
+              required
+              [(ngModel)] = "model.commentText"
+              name="commentText"
+              #commentText="ngModel">
+      <mat-card-content >
+        <p [hidden]="commentText.valid || commentText.pristine">
+          Text is required</p>
+      </mat-card-content>
+    </mat-card-content>
+
+</form>
+
+  <mat-card-actions>
+    <button mat-raised-button type="submit" class="btn btn-success"
+            (click)="newComment(); commentForm.reset()"
+            [disabled]="!commentForm.form.valid">Comment</button>
+  </mat-card-actions>
+
+</mat-card>
+
+
+

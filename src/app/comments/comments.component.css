@@ -1,0 +1,24 @@
+.mat-card {
+  font-family: 'Grandstander', cursive;
+}
+
+.all-comments {
+  background: #00b0ff;
+}
+
+.single-comment {
+  background: #69e2ff;
+
+  outline: black;
+}
+
+.comment-form {
+  background: whitesmoke;
+}
+
+.mat-form-field {
+  padding: 1%;
+  width: 95%;
+  background: white;
+  border-radius: 4px;
+}

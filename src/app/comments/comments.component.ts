@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Comment } from '../comment.model'
+import { Comment } from '../models-and-mocks/comment.model'
+import { CommentService } from '../services/comment.service';
+import { COMMENTS } from '../models-and-mocks/comment-list'
 
 @Component({
   selector: 'app-comments',
@@ -8,32 +10,18 @@ import { Comment } from '../comment.model'
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  allowNewComment = false;
-  comment: Comment;
-  commentLength: Number;
-  commentText: string
-
-  commentForm = new FormGroup({
-    message: new FormControl(''),
-  })
+  comment: Comment
+  comments: Comment[] = COMMENTS;
 
   constructor(
+    private commentService: CommentService
   ) {}
 
-  ngOnInit(): void {  }
-
-  allowButton() {
-    const commentLength = this.comment.commentText.length
-    if (commentLength > 0) {
-      this.allowNewComment = true
+  ngOnInit(): void {
+    const commentList = this.commentService.getAllComments()
+    for (let i=0; i<commentList.length; i++) {
+      console.log(commentList[i].commentText)
     }
-  }
-
-  submit() {
-    console.log("submitted")
-    const newComment = new Comment (this.commentForm.value);
-    console.log(this.commentForm.value);
-    console.log(newComment)
-  }
+    }
 
 }

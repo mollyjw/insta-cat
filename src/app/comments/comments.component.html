@@ -1,9 +1,21 @@
-<mat-card class="right">
-  <mat-card-title>Cat Comments</mat-card-title>
-    <mat-label>Leave a comment</mat-label>
-    <mat-form-field class="formfield" class="comment-text">
-      <input matInput placeholder="Ex: you've CAT to be KITTEN me!" formControlName="commentText">
-    </mat-form-field>
-  <button mat-raised-button (click)='submit()'>Submit</button>
+<mat-card class="all-comments">
+  <mat-card-title>
+    Cat Comments
+  </mat-card-title>
+
+  <mat-card class="single-comment" *ngFor="let comment of comments">
+    <mat-label>
+      <b>
+        {{comment.name}}
+      </b>
+    </mat-label>
+    <mat-card-content>
+      {{comment.commentText}}
+    </mat-card-content>
+  </mat-card>
+
+  <app-add-comment class="comment-form"></app-add-comment>
 </mat-card>
+
+
 

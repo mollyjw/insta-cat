@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatCardComponent } from './cat-card/cat-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
 import { MatCardModule } from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -22,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SingleCatComponent } from './single-cat/single-cat.component';
 import { CommentsComponent } from './comments/comments.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 
 
@@ -32,7 +35,8 @@ import { CommentsComponent } from './comments/comments.component';
     HomeComponent,
     NavbarComponent,
     SingleCatComponent,
-    CommentsComponent
+    CommentsComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,8 @@ import { CommentsComponent } from './comments/comments.component';
     MatGridListModule,
     MatButtonModule,
     MatTooltipModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
