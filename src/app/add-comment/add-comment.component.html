@@ -3,14 +3,14 @@
     Leave a Comment
   </mat-card-subtitle>
 
-  <form (ngSubmit)="onSubmit()" #commentForm="ngForm">
+  <form #commentForm="ngForm" (ngSubmit)="newComment(commentForm); onSubmit()" >
 
     <mat-card-content class="form-group">
       <mat-label for="name">Name</mat-label>
       <input type="text"
       class="form-control" id="name"
             required
-            [(ngModel)] ="model.name"
+            [(ngModel)] ="newPost.name"
             name="name"
             #name="ngModel">
       <mat-card-content>
@@ -25,7 +25,7 @@
       <input type="text"
               class="form-control" id="commentText"
               required
-              [(ngModel)] = "model.commentText"
+              [(ngModel)] = "newPost.commentText"
               name="commentText"
               #commentText="ngModel">
       <mat-card-content >
@@ -37,9 +37,9 @@
 </form>
 
   <mat-card-actions>
-    <button mat-raised-button type="submit" class="btn btn-success"
-            (click)="newComment(); commentForm.reset()"
-            [disabled]="!commentForm.form.valid">Comment</button>
+    <button mat-raised-button type="submit" class="btn btn-success" [disabled]="!commentForm.form.valid"
+            (click)="newComment(commentForm);"
+            >Comment</button>
   </mat-card-actions>
 
 </mat-card>

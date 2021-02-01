@@ -12,8 +12,9 @@ export class CommentService {
     return COMMENTS
   }
 
-  addNewComment(params: any) {
-    COMMENTS.push(params)
-    console.log(params)
-  }
+  // addNewComment(params: any) {
+  //   console.log("in comments service")
+  //   COMMENTS.push(params)
+  //   console.log(params)
+  // }
 }
