@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
-import { CommentService } from '../services/comment.service';
 import { Comment } from '../models-and-mocks/comment.model'
 import { COMMENTS } from '../models-and-mocks/comment-list';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +14,7 @@ export class AddCommentComponent {
   submitted = false;
   allComments = COMMENTS
 
+
   onSubmit() { this.submitted = true; }
 
   commentForm: NgForm;
@@ -24,12 +24,10 @@ export class AddCommentComponent {
   // })
 
   newComment(commentForm: NgForm) {
-    this.newPost = new Comment(this.newPost.name, this.newPost.commentText)
-    this.allComments.push(this.newPost);
-    console.log("i submitted")
-    commentForm.reset()
-    // this.newPost = new Comment('', '')
-    console.log("i reseted")
+    this.allComments.push(new Comment(this.newPost.name,  this.newPost.commentText))
+    console.log(this.newPost)
+    commentForm.resetForm()
+    console.log("i resetted")
   }
 
 }

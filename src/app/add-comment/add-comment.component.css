@@ -1,0 +1,31 @@
+.mat-card {
+  font-family: 'Grandstander', cursive;
+}
+
+mat-card-subtitle {
+  color: black;
+  font-size: large;
+}
+
+mat-label {
+  color: black
+}
+
+.mat-card-actions {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+input {
+  line-height: 1.7em;
+  width: 99%;
+  display: block;
+  padding: 2px 4px;
+  resize: vertical;
+  box-sizing: border-box;
+
+}
+

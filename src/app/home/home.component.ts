@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   private sub = new Subscription()
   constructor(
     private router: Router,
-    private catService: CatService
+    private catService: CatService,
   ) { }
 
   ngOnInit(): void {

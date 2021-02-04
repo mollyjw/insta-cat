@@ -1,0 +1,10 @@
+<p>all-favorites works!</p>
+<div class="masonry-layout">
+  <div class="masonry-layout__panel" *ngFor="let favorite of favorites" >
+    <div class="masonry-layout__panel-content" >
+      <mat-card>
+        [favorite]="favorite"
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SingleCatComponent } from './single-cat/single-cat.component';
 import { CommentsComponent } from './comments/comments.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
+import { AddFavoriteComponent } from './add-favorite/add-favorite.component';
+import { AllFavoritesComponent } from './all-favorites/all-favorites.component';
+import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
 
 
 
@@ -36,7 +39,10 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     NavbarComponent,
     SingleCatComponent,
     CommentsComponent,
-    AddCommentComponent
+    AddCommentComponent,
+    AddFavoriteComponent,
+    AllFavoritesComponent,
+    FavoriteCardComponent
   ],
   imports: [
     BrowserModule,

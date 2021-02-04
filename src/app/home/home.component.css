@@ -15,4 +15,10 @@
 
 .mat-card {
   background-color: #cd65ff;
+  font-family: 'Grandstander', cursive;
+  text-align: center;
 }
+p {
+  font-size: 1.3em;
+}
+

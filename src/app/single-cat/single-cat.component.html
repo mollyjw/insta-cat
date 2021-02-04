@@ -5,7 +5,14 @@
         <img mat-card-image [src]="catImg" alt="Photo of a cat">
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button>Like</button>
+        <button class="favorite"
+                mat-raised-button
+                matTooltip="Add to Your Favorites"
+                matTooltipPosition="above"
+                matTooltipClass="tooltip-teal"
+                aria-label="Favorite">
+          <mat-icon>favorite</mat-icon>
+        </button>
       </mat-card-actions>
     </mat-card>
 
@@ -13,13 +20,4 @@
     <div class="right">
       <app-comments></app-comments>
     </div>
-    <!-- <mat-card class="right">
-      <mat-card-title>Cat Comments</mat-card-title>
-      <mat-form-field>
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex: you've CAT to be KITTEN me!"></textarea>
-      </mat-form-field>
-      <button mat-raised-button>Submit</button>
-    </mat-card> -->
-
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Cat } from '../models-and-mocks/cat.model';
@@ -12,6 +14,8 @@ import { CatService } from '../services/cat.service';
 export class SingleCatComponent implements OnInit {
   cat: Cat
   catImg: string
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[2]);
   private sub = new Subscription()
   constructor(
     private catService: CatService,

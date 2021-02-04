@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { Router } from '@angular/router';
 import { Cat } from '../models-and-mocks/cat.model';
+import { FavoriteService } from '../services/favorite.service';
 
 @Component({
   selector: 'app-cat-card',
@@ -17,6 +18,7 @@ export class CatCardComponent implements OnInit {
   catImg: string
   positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
   position = new FormControl(this.positionOptions[2]);
+  favoriteService: FavoriteService
 
   constructor(private router: Router) { }
 
@@ -32,4 +34,8 @@ export class CatCardComponent implements OnInit {
     this.router.navigate([`/cats/${id}`])
   }
 
+  favorite(id: string) {
+    this.favoriteService.addToFavorites(id)
+    console.log("favorite added")
+  }
 }

@@ -14,14 +14,16 @@
           </button>
         </a>
 
-        <button class="favorite"
-                mat-raised-button
-                matTooltip="Add to Your Favorites"
-                matTooltipPosition="above"
-                matTooltipClass="tooltip-teal"
-                aria-label="Favorite">
-          <mat-icon>favorite</mat-icon>
-        </button>
+        <a (click)="favorite(cat.id)">
+          <button class="favorite"
+                  mat-raised-button
+                  matTooltip="Add to Your Favorites"
+                  matTooltipPosition="above"
+                  matTooltipClass="tooltip-teal"
+                  aria-label="Favorite">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </a>
 
       </div>
 
