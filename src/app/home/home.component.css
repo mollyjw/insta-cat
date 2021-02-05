@@ -1,3 +1,11 @@
+.title {
+  color: #0081cb;
+  font-family: 'Grandstander', cursive;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 48px;
+}
+
 .masonry-layout {
   column-count: 4;
   column-gap: 0;

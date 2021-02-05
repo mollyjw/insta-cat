@@ -1,8 +1,16 @@
-<div class="masonry-layout">
-  <div class="masonry-layout__panel" *ngFor="let favorite of favorites" >
-    <div class="masonry-layout__panel-content" >
-      <app-favorite-card [favorite]="favorite"> </app-favorite-card>
+<div *ngIf="favorites">
+  <h1 class="title">Your Favorites</h1>
+  <div class="masonry-layout">
+    <div class="masonry-layout__panel" *ngFor="let favorite of favorites">
+      <div class="masonry-layout__panel-content">
+        <app-favorite-card [favorite]="favorite"> </app-favorite-card>
+      </div>
     </div>
   </div>
 </div>
-<p>No favorites</p>
+
+<div *ngIf="!favorites">
+  <h1 class="title">Your Favorites</h1>
+  <h2>You don't have any favorites yet!</h2>
+</div>
+

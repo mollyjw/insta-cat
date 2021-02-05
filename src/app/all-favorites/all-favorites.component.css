@@ -1,0 +1,28 @@
+.title {
+  color: #0081cb;
+  font-family: 'Grandstander', cursive;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.masonry-layout {
+  column-count: 4;
+  column-gap: 0;
+  margin: 3%;
+}
+
+.masonry-layout__panel {
+  break-inside: avoid;
+}
+
+.masonry-layout__panel-content {
+  padding: 8px;
+  /* display: flex; Removing this line makes each card centered in the column */
+}
+
+.mat-card {
+  background-color: darkorchid;
+  font-family: 'Grandstander', cursive;
+  text-align: center;
+}
