@@ -4,10 +4,12 @@
   </button>
 
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>thumbs_up_down</mat-icon>
-      <span>Your Faves</span>
-    </button>
+    <a routerLink='favorites'>
+      <button mat-menu-item>
+        <mat-icon>thumbs_up_down</mat-icon>
+        <span>Your Faves</span>
+      </button>
+    </a>
     <button mat-menu-item>
       <mat-icon>info</mat-icon>
       <span>About Us</span>

@@ -2,7 +2,14 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 import { Cat } from '../models-and-mocks/cat.model';
+import { Favorite } from '../models-and-mocks/favorite.model';
 import { FavoriteService } from '../services/favorite.service';
 
 @Component({
@@ -18,9 +25,18 @@ export class CatCardComponent implements OnInit {
   catImg: string
   positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
   position = new FormControl(this.positionOptions[2]);
-  favoriteService: FavoriteService
 
-  constructor(private router: Router) { }
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
+  favorites: Favorite[] = []
+  private sub = new Subscription()
+
+  constructor(
+    private router: Router,
+    private favoriteService: FavoriteService,
+    private _snackBar: MatSnackBar
+    ) { }
 
   ngOnInit(): void {}
 
@@ -34,8 +50,31 @@ export class CatCardComponent implements OnInit {
     this.router.navigate([`/cats/${id}`])
   }
 
+  openSnackBar() {
+    this._snackBar.open('Added to your favorites!', 'Close', {
+      duration: 2500,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition
+    });
+  }
+
   favorite(id: string) {
-    this.favoriteService.addToFavorites(id)
+    console.log(id)
+    const params = {
+      imageId: id
+    }
+    this.sub.add(
+      this.favoriteService.addToFavorites(params).subscribe(
+        data => {
+          if (data) {    }
+      }, error => {
+        if (error) {
+          console.log(error)
+        }
+      })
+
+    )
+    this.openSnackBar
     console.log("favorite added")
   }
 }

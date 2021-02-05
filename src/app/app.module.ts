@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -25,7 +26,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SingleCatComponent } from './single-cat/single-cat.component';
 import { CommentsComponent } from './comments/comments.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
-import { AddFavoriteComponent } from './add-favorite/add-favorite.component';
 import { AllFavoritesComponent } from './all-favorites/all-favorites.component';
 import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
 
@@ -40,7 +40,6 @@ import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
     SingleCatComponent,
     CommentsComponent,
     AddCommentComponent,
-    AddFavoriteComponent,
     AllFavoritesComponent,
     FavoriteCardComponent
   ],
@@ -57,6 +56,7 @@ import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
     MatGridListModule,
     MatButtonModule,
     MatTooltipModule,
+    MatSnackBarModule,
     FlexLayoutModule,
     FormsModule
   ],

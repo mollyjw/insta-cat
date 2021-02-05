@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Favorite } from '../models-and-mocks/favorite.model';
 
 @Component({
   selector: 'app-favorite-card',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteCardComponent implements OnInit {
 
+  @Input() favorite: Favorite
+  favoriteImg: string
+  favorites: Favorite[] = []
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges() {
+    console.log('hello from favorites')
+    if (this.favorite) {
+      this.favoriteImg = this.favorite.image_id
+    }
   }
 
 }

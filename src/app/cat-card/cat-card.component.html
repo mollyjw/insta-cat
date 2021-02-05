@@ -14,7 +14,7 @@
           </button>
         </a>
 
-        <a (click)="favorite(cat.id)">
+        <a (click)="favorite(cat.id); openSnackBar()">
           <button class="favorite"
                   mat-raised-button
                   matTooltip="Add to Your Favorites"

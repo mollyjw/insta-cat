@@ -18,7 +18,7 @@ export class FavoriteService {
 
    getAllFavorites() {
      const headers = new HttpHeaders({
-       'authorization': environment.apiKey,
+       'x-api-key': environment.apiKey,
        'sub_id': 'user',
        'pagination-limit': '50',
        'pagination-page': '0'
@@ -33,15 +33,17 @@ export class FavoriteService {
      )
    }
 
-   addToFavorites(image_id) {
-     const body = { image_id: this.imageId}
+   addToFavorites(params) {
+     const body =  {
+       'image_id': params.imageId
+     }
      const headers = new HttpHeaders({
-       'authorization': environment.apiKey,
-       'content-type': 'application/json'
+       'x-api-key': environment.apiKey,
+       'Content-Type': 'application/json'
      })
-     return this.http.post<Favorite>(`${this.catApi}/favourites`, {body, headers})
+     return this.http.post<Favorite[]>(`${this.catApi}/favourites`, body, {headers})
      .pipe(
-       map((data: Favorite) => {
+       map((data: Favorite[]) => {
          return data;
        }), catchError(error => {
          return throwError('something went wrongo')
