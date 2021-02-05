@@ -5,7 +5,7 @@
         <img mat-card-image [src]="catImg" alt="Photo of a cat">
       </mat-card-content>
       <mat-card-actions>
-        <a (click)="favorite(cat.id)">
+        <a (click)="favorite(cat.id); openSnackBar()">
           <button class="favorite"
                   mat-raised-button
                   matTooltip="Add to Your Favorites"

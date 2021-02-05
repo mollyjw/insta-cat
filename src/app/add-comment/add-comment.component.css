@@ -1,5 +1,7 @@
 .mat-card {
   font-family: 'Grandstander', cursive;
+  margin: 0%;
+  width: auto;
 }
 
 mat-card-subtitle {
