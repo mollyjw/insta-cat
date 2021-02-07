@@ -1,37 +1,6 @@
-.mat-card {
+.favorite-card {
   background-color: #cd65ff;
   font-family: 'Grandstander', cursive;
   text-align: center;
-  margin-bottom: 0%;
-}
-
-.mat-card-actions {
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.mat-raised-button {
-  width: 42%;
-  background-color: #00b0ff;
-  padding: 1.5%;
-  cursor: pointer;
-  border: transparent;
-  font-size: 1em;
-}
-
-#delete {
-  margin: 0px 8px;
-}
-
-.material-icons {
-  vertical-align: middle;
-}
-
-.delete-button {
-  background: #0081cb;
-  font-size: 1.1em;
-  font-family: 'Grandstander', cursive;
+  margin-bottom: 0;
 }

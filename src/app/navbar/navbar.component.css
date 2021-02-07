@@ -1,6 +1,7 @@
 .mat-toolbar {
   background-color: darkorchid;
   font-family: 'Grandstander', cursive;
+  display:flex;
 }
 
 .mat-menu-item {
@@ -8,8 +9,20 @@
   color: black;
 }
 
-.title {
-  font-size: 1.5em;
+.left {
+  margin-right: auto;
+}
+
+.center {
+  font-size: 2em;
+  position: absolute;
+    left: 50%;
+  transform: translatex(-50%);
+
+}
+
+.right {
+  margin-left: auto;
 }
 
 a {

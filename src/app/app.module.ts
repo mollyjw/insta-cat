@@ -17,7 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -28,8 +28,11 @@ import { CommentsComponent } from './comments/comments.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { AllFavoritesComponent } from './all-favorites/all-favorites.component';
 import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
-
-
+import { CatsInSpaceComponent } from "./cats-in-space/cats-in-space.component";
+import { CatsInGlassesComponent } from './cats-in-glasses/cats-in-glasses.component';
+import { CatsInBoxesComponent } from './cats-in-boxes/cats-in-boxes.component';
+import { CatsInSinkComponent } from './cats-in-sink/cats-in-sink.component';
+import { CatsInClothesComponent } from './cats-in-clothes/cats-in-clothes.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,12 @@ import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
     CommentsComponent,
     AddCommentComponent,
     AllFavoritesComponent,
-    FavoriteCardComponent
+    FavoriteCardComponent,
+    CatsInSpaceComponent,
+    CatsInGlassesComponent,
+    CatsInBoxesComponent,
+    CatsInSinkComponent,
+    CatsInClothesComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +66,9 @@ import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
     MatTooltipModule,
     MatSnackBarModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+<h1 class="title">Well-Dressed Cats</h1>
+
+<div class="masonry-layout">
+  <div class="masonry-layout__panel" *ngFor="let cat of cats" >
+    <div class="masonry-layout__panel-content" >
+      <app-cat-card  [cat]="cat"></app-cat-card>
+    </div>
+  </div>
+</div>
+
+<mat-card class="footer">
+  <mat-card-content>
+    <p>You've reached the end. Refresh to see more cats!</p>
+
+  </mat-card-content>
+</mat-card>
