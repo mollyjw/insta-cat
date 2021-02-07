@@ -3,19 +3,26 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "heroku-postbuild": "ng build --prod"
+  },
+  "engines": {
+    "node": "14.15.3",
+    "npm": "6.14.9"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.4",
     "@angular/cdk": "^11.0.4",
+    "@angular/cli": "^11.1.4",
     "@angular/common": "~11.0.4",
     "@angular/compiler": "~11.0.4",
+    "@angular/compiler-cli": "^11.0.9",
     "@angular/core": "~11.0.4",
     "@angular/flex-layout": "^11.0.0-beta.33",
     "@angular/forms": "~11.0.4",
@@ -28,14 +35,17 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ngbmodule/material-carousel": "^0.7.1",
     "@ngmodule/material-carousel": "^0.6.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "typescript": "~4.0.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.4",
-    "@angular/cli": "~11.0.4",
-    "@angular/compiler-cli": "~11.0.4",
+    "@angular/cli": "^11.1.4",
+    "@angular/compiler-cli": "^11.0.9",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
